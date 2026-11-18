@@ -1,0 +1,11 @@
+{
+  "app": "Street Admin",
+  "release": "Pix, Equipe e Mobile",
+  "build": "20261115-pix-equipe-mobile1",
+  "features": [
+    "QR Code Pix e Copia e Cola",
+    "Aba Equipe",
+    "Layout mobile",
+    "Atualização da interface pelo servidor"
+  ]
+}

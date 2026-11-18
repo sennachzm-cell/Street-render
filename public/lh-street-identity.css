@@ -1,0 +1,73 @@
+/* LH STREET / ADMIN — identity refresh 2026-11-18.
+   Inherits actual Street Admin components; zero fake dashboard data. */
+:root, html[data-theme="dark"] {
+  --accent:#b7a7df;
+  --violet:#9a86ce;
+  --violet-weak:rgba(171,147,216,.12);
+  --shell-deep:#12151c;
+  --shell-deep-border:#2e313a;
+  --bg:#0e1116;
+  --panel:#191d25;
+  --panel-alt:#20242e;
+  --line:#303540;
+  --muted:#a3a8b7;
+  --text:#f2f3f6;
+  --input:#1e222b;
+  --hover:#242a34;
+  --card-shadow:0 12px 36px rgba(0,0,0,.16);
+  font-family:'DM Sans',system-ui,sans-serif;
+}
+html[data-theme="light"]{
+ --accent:#6a5b8e;
+ --violet:#6d5e98;
+ --violet-weak:rgba(103,90,145,.1);
+ --shell-deep:#13161c;
+ --shell-deep-border:#2f3139;
+ --bg:#f3f4f5;
+ --panel:#fff;
+ --panel-alt:#f5f5f7;
+ --line:#e3e4e9;
+ --muted:#666b78;
+ --text:#20242d;
+ --input:#f7f7f9;
+ --hover:#f0eef6;
+}
+.sidebar{background:#13161c!important;border-right:1px solid #373a43!important;}
+.sidebar::before{content:'';position:absolute;inset:0 0 auto;height:225px;background:linear-gradient(180deg,rgba(18,20,27,.64),#13161c),url('/lh-street-logo.png') center 20%/cover;opacity:.15;pointer-events:none}
+.sidebar>.brand,.sidebar nav,.sidebar>.nav-section-label,.sidebar-foot{position:relative;z-index:1}
+.sidebar .brand{padding-bottom:24px!important;border-bottom:1px solid rgba(235,237,242,.09)}
+.sidebar .brand strong{font-family:Manrope,system-ui,sans-serif;font-size:15px;letter-spacing:.12em;font-weight:800;color:#f9fafc!important}
+.brand-admin{color:#a8a0bc;font-size:.68em;letter-spacing:.12em}
+.sidebar .brand small{letter-spacing:.12em;color:#929ba9!important}
+.sidebar .nav-section-label{font-size:10px;letter-spacing:.16em;color:#747d8c!important}
+.sidebar .nav-item{border-radius:10px!important;color:#b2b5be!important;margin:3px 0!important;transition:background .18s,color .18s,transform .18s!important}
+.sidebar .nav-item:hover{background:#252a33!important;color:white!important;transform:translateX(2px)}
+.sidebar .nav-item.active{background:#2a2935!important;color:#ece4ff!important;border:1px solid rgba(200,182,242,.13)!important;box-shadow:inset 3px 0 #af9acf!important}
+.sidebar .nav-item.active .nav-glyph{color:#c9b6ee!important}
+.sidebar .sidebar-foot{background:#191c24!important;border-color:#30333c!important}
+.topbar{border-bottom:1px solid var(--line)!important;box-shadow:none!important}
+.topbar .eyebrow,.page-intro .eyebrow{letter-spacing:.16em!important;font-weight:800!important;color:var(--accent)!important}
+.topbar h1,#page-title{font-family:Manrope,sans-serif!important;letter-spacing:-.045em!important}
+.stat-card,.panel,.modal,.cash-session-drawer{border-radius:15px!important;box-shadow:var(--card-shadow)!important}
+button.primary,.primary{box-shadow:none!important;background:#9f8bc9!important;color:#101118!important;border-color:#9f8bc9!important;font-weight:800!important;transition:filter .16s,transform .16s!important}
+button.primary:hover,.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+button.secondary,.secondary,.nav-item,.theme-toggle{font-family:'DM Sans',system-ui,sans-serif}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #c2a9f2!important;outline-offset:3px}
+.toast{border-radius:12px!important;padding:13px 17px!important;box-shadow:0 15px 40px rgba(0,0,0,.22)!important}
+.auth-showcase{background:linear-gradient(125deg,rgba(15,17,23,.84),rgba(17,20,27,.92)),url('/lh-street-logo.png') 52% 50%/cover!important;}
+.auth-showcase::before{opacity:.16!important}
+.auth-showcase h1,.showcase-copy h1{font-family:Manrope,system-ui,sans-serif!important;letter-spacing:-.06em!important;line-height:1.08!important}
+.showcase-copy h1 span{color:#d7cee8!important}
+.showcase-brand strong,.auth-mobile-brand strong{font-family:Manrope,system-ui,sans-serif;letter-spacing:.1em;font-weight:800}
+.shop-logo-slot .logo-fallback{background:#1a1d24!important;border:1px solid rgba(255,255,255,.12);overflow:hidden!important}
+.shop-logo-slot .streetadmin-default-mark{object-fit:cover;object-position:center!important;width:100%!important;height:100%!important;border-radius:inherit}
+.showcase-kicker,.auth-kicker{letter-spacing:.15em!important;color:#cdbce9!important}
+.showcase-line,.showcase-footer{color:#aab0bc!important}
+.street-shell-footer{background:#13161c!important;border-color:#343944!important;color:#acb0ba!important}
+.street-shell-footer::before{background:linear-gradient(90deg,#8c79b5,#c6bdce,transparent)!important}
+.street-shell-footer-brand,.street-shell-footer-caption{color:#aeb2bc!important}
+html[data-theme="light"] .main,html[data-theme="light"] .content{background:linear-gradient(160deg,#f8f8fa,#f0f1f4)!important}
+html[data-theme="light"] .topbar{background:#fdfdfe!important;border-color:#e4e5e8!important}
+html[data-theme="light"] .panel,html[data-theme="light"] .stat-card{box-shadow:0 12px 26px rgba(32,36,48,.04)!important;border-color:#e4e5e9!important}
+@media(max-width:760px){.sidebar .brand strong{font-size:13px}.auth-showcase{background-position:50% 40%!important}.topbar{padding-inline:14px!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0.01ms!important;animation-duration:0.01ms!important;scroll-behavior:auto!important}}
